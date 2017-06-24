@@ -1,8 +1,7 @@
-# TriviaGame
-Trivia Game
+# GIF_Search
 
-game using JavaScript and timer
+giphy API
 
-https://github.com/jonathanansley/TriviaGame
+https://github.com/jonathanansley/GIF_Search
 
-https://jonathanansley.github.io/TriviaGame
+https://jonathanansley.github.io/GIF_Search
