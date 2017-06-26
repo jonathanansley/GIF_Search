@@ -8,14 +8,7 @@ window.onload = function() {
 
 
 
-// 1.  Fool around with the GIPHY API. [Giphy API](https://github.com/Giphy).
-//    * Be sure to read about these GIPHY parameters (hint, hint): 
-//      * `q`
-//      * `limit`
-//      * `rating`
-//    * Like many APIs, GIPHY requires developers to use a key to access their API data.
-// For now, you can use their [public API key](https://github.com/Giphy/GiphyAPI#public-beta-key).
-//    * Make sure you switch the protocol in the query URL from **`http to https`**, or the app may not work properly when deployed to Github Pages.
+
 
 
 
@@ -71,8 +64,21 @@ var gifRating = 'G';
     // Event listener for our buttons
     $("#gif-button").on("click", function() {
 
+
+
+
+//    * switch the protocol in the query URL from **`http to https`**,
+// or the app may not work properly when deployed to Github Pages.
+
+
+
+      // public beta API key
+      var apiKey = 'dc6zaTOxFJmzC';
+
       // Storing our giphy API URL for a random gif image
-      var queryURL = "http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=trek";
+      var queryURL = 'https://api.giphy.com/v1/gifs/search?q=ryan+gosling&api_key=dc6zaTOxFJmzC&limit=5'
+      
+      // var queryURL = "https://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=trek";
 
       // Perfoming an AJAX GET request to our queryURL
       $.ajax({
@@ -92,6 +98,7 @@ var gifRating = 'G';
 
           // Creating and storing an image tag
           var gifImage = $('<img>');
+
           gifImage.attr('src', response.data[i].images.fixed_height_url)
 
           gifDiv.append(p);
